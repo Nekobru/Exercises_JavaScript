@@ -1,2 +1,2 @@
-# Exercises_JavaScript
+# Exercises JavaScript
 Test practice zone
