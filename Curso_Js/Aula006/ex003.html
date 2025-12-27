@@ -19,12 +19,16 @@
     <h1>Olá Mundo</h1>
     <p>estou protegido da maldição</p>
     <script>// Aqui é o JavaScript
-        var number1 = Number.parseInt(window.prompt('Digite um número de telefone: '))
-        var number2 = Number.parseInt(window.prompt('Digite outro número: '))
+        var number1 = Number(window.prompt('Digite um número de telefone: '))
+        var number2 = Number(window.prompt('Digite outro número: '))
         var soma = number1 + number2
-        window.alert('A soma dos valores é : '+ soma) // Concatenção
+        if (isNaN(soma)){
+            window.alert('Atenção! Utilize Ponto não virgula')
+        } else {
+        window.alert('A soma dos valores é : '+ soma)} // Concatenção
         // + para adição
         // + para concatenação 
+        // String(n) ou n.toString converte número em uma string
     </script>
 </body>
 </html>
