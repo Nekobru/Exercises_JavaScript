@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfandega</title>
+</head>
+<body>
+    <h1>Bem Vindo ao site da Alfandega</h1>
+    Qual é seu país de origem? <input type="text" name="pais" id="pais" >
+    <input type="button" value="verificar" onclick="origem()"> 
+    <div id="resultado">
+
+    </div>
+    <script>
+        function origem(){
+            txtpais = window.document.querySelector("input#pais")
+            pais = String(txtpais.value)
+            resultado = window.document.querySelector("div#resultado")
+            resultado.innerHTML = `<p> Resultado para <strong>${pais}</strong></p> `
+            if (pais == brasil){
+            
+        }
+    </script>
+</body>
+</html>
