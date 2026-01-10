@@ -14,13 +14,17 @@
     </div>
     <script>
         function origem(){
-            txtpais = window.document.querySelector("input#pais")
-            pais = String(txtpais.value)
-            resultado = window.document.querySelector("div#resultado")
+            var txtpais = window.document.querySelector("input#pais")
+            var pais = String(txtpais.value)
+            var resultado = window.document.querySelector("div#resultado")
             resultado.innerHTML = `<p> Resultado para <strong>${pais}</strong></p> `
-            if (pais == brasil){
-            
-        }
+            pais = pais.toLowerCase();
+            if(pais != 'brasil'){
+                resultado.innerHTML += `<p>Você é estrangeiro..\n Por gentileza saia daqui</p>`
+            }else{
+                resultado.innerHTML += `<p>Você é brasileiro.. \n Por gentileza cai fora</p>`
+            }
+          }
     </script>
 </body>
 </html>
