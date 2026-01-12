@@ -6,7 +6,7 @@
     <title>Alfandega</title>
 </head>
 <body>
-    <h1>Bem Vindo ao site da Alfandega</h1>
+    <h1>Bem vindo ao site da Alfandega</h1>
     Qual é seu país de origem? <input type="text" name="pais" id="pais" >
     <input type="button" value="verificar" onclick="origem()"> 
     <div id="resultado">
@@ -17,9 +17,9 @@
             var txtpais = window.document.querySelector("input#pais")
             var pais = String(txtpais.value)
             var resultado = window.document.querySelector("div#resultado")
+            pais = pais.trim().toLowerCase();
             resultado.innerHTML = `<p> Resultado para <strong>${pais}</strong></p> `
-            pais = pais.toLowerCase();
-            if(pais != 'brasil'){
+            if(pais !='brasil'&& pais != 'brazil'){
                 resultado.innerHTML += `<p>Você é estrangeiro..\n Por gentileza saia daqui</p>`
             }else{
                 resultado.innerHTML += `<p>Você é brasileiro.. \n Por gentileza cai fora</p>`
